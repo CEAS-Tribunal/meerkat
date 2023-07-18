@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> MEERKAT Form </title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex"> <!-- Block search indexing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A form to allow CEAS Tribunal members to submit reimbursement requests">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+</head>
+<body>
+    <div class="intro">
+        <header>
+            <a href="https://tribunal.uc.edu"><img src="./images/tribunal_logo.png" alt="Tribunal logo"></a>
+        </header>
+        <div class="container request-form">
+            <div class="title">
+                <h1> MEERKAT </h1>
+            </div>
+            <p class="intro-info"> Please fill out this form with your event. 
+                 If you need assistance at any point, feel free to email the tech chairs at <strong id="admin-email"></strong>.
+            </p>
+            <form>
+                <h2> Member Information </h2>
+                <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" style="padding-top:0px">
+                <input type="text" id="position" name="position" placeholder="Position in CEAS Tribunal" autocomplete="off">
+                <input type="text" id="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="text" id="mId" name="mId" placeholder="M# (Include the M)" autocomplete="off" style="margin-bottom:20px">
+            </form>
+            <form>
+                <h2> Event Information </h2>
+                <label>Event Date</label>
+                <input type="date" id="Event-date" name="date" placeholder="Event Date (YYYY-MM-DD)" autocomplete="off" style="padding-top:0px">
+                <input type="text" id="description" name="description" placeholder="Description" autocomplete="off">
+            
+                <label> do poeple need to signup ahead of time for the event? </label>
+                <div class="radio-group">
+                    <div class="radio-button">
+                        <input type="radio" id="presign-yes" name="presign-yes" value="yes" autocomplete="off">
+                        <label for="presign-yes"> Yes </label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="presign-no" name="presign-no" value="no" autocomplete="off">
+                        <label for="presign-no"> No </label>
+                    </div>
+                </div>
+                <label id="signup-date-label" autocomplete="off" style="margin-bottom:20px;visibility: hidden; height: 0px; overflow: hidden; opacity: 0; margin: 0px; padding: 0px;">What is the last day to signup?</label>
+                    <input type="date" id="signup-date" name="signup-date" placeholder="what is the last day to signup" autocomplete="off" style="margin-bottom:20px;visibility: hidden; height: 0px; overflow: hidden; opacity: 0; margin: 0px; padding: 0px;">
+                    
+                    <input type="number" id="max-number" name="max-number" placeholder="how many people can signup" autocomplete="off" style="margin-bottom:20px;visibility: hidden; height: 0px; overflow: hidden; opacity: 0; margin: 0px; padding: 0px;">
+                    <label id="carpool-label" style="visibility: hidden; height: 0px; overflow: hidden; opacity: 0; margin: 0px; padding: 0px;"> do you need carpool for this event </label>
+                    <div class="radio-group" id="carpool" style="visibility: hidden; height: 0px; overflow: hidden; opacity: 0; margin: 0px; padding: 0px;">
+                        <div class="radio-button">
+                            <input type="radio" id="carpool-yes" name="carpool-yes" value="yes" autocomplete="off">
+                            <label for="carpool-yes"> Yes </label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="carpool-no" name="carpool-no" value="no" autocomplete="off">
+                            <label for="carpool-no"> No </label>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <h2> attendee Information </h2>
+                    <p class="intro-info"> Please indicate what information is needed form attendees.
+                   </p>
+                    <div class="radio-group">
+                        <div class="radio-button">
+                            <input type="radio" id="attendee-name" name="attendee-name" value="name" autocomplete="off">
+                            <label for="attendee-name"> name </label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="phone number" name="phone number" value="phone number" autocomplete="off">
+                            <label for="phone number"> phone number </label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="M-number" name="M-number" value="M-number" autocomplete="off">
+                            <label for="M-number"> M-number </label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="A-email" name="A-email" value="email" autocomplete="off">
+                            <label for="A-email"> email </label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" id="verify payment" name="verify paymnet" value="verify payment" autocomplete="off">
+                            <label for="verify payment"> verify payment </label>
+                        </div>
+ 
+                    </div>
+                </form>
+            <form>
+                <h2> Picture upload </h2>
+                <label> Event picture </label>
+                <label class="file-upload">
+                    <input type="file" id="event-image" name="event-image" accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, image/png, image/jpeg">
+                    <div class="file-text file-text-receipt"><i class="fas fa-file-upload"></i><span id="upload-receipt-text"> Click to Upload </span></div>
+                </label>
+
+                <input type="button" value="Submit" id="submit-button">
+                <div class="loader lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </form>
+        </div>
+        <div class="container reserved-ticket">
+            <div class="reserved-box">
+                <p class="success-emoji"> 🎉 </p>
+                <p> We have sent you an email to <span class="reserved-email"></span> confirming your reimbursement request. </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p> University of Cincinnati | © 2023 College of Engineering and Applied Science Tribunal </p>
+        <p> For any questions or comments, contact us at uc.eas.tribunal@gmail.com. </p>      
+    </footer>
+    <script type=module>
+        const formPresignYes = document.querySelector('.intro #presign-yes');
+const formPresignNo = document.querySelector('.intro #presign-no');
+const formCarpoolYes = document.querySelector('.intro #carpool-yes');
+const formCarpoolNo = document.querySelector('.intro #carpool-no');
+const formMaxnum = document.querySelector('.intro #max-number');
+const formSignupDate = document.querySelector('.intro #signup-date');
+const formCarpool = document.querySelector('.intro #carpool');
+const formCarpoolLabel = document.querySelector('.intro #carpool-label');
+const formSignupDateLabel= document.querySelector('.intro #signup-date-label')
+formPresignNo.onclick = function formPresignNoButtonOnclick() {
+    formMaxnum.style.visibility = 'hidden';
+    formSignupDate.style.visibility = 'hidden';
+    formPresignYes.checked = false;
+    formMaxnum.style.height = '0';
+    formMaxnum.style.overflow = 'hidden';
+    formMaxnum.style.opacity = '0';
+    formMaxnum.style.margin = '0px';
+    formMaxnum.style.padding = '0';
+    formSignupDate.style.height = '0';
+    formSignupDate.style.overflow = 'hidden';
+    formSignupDate.style.opacity = '0';
+    formSignupDate.style.margin = '0px';
+    formSignupDate.style.padding = '0';
+
+    formSignupDateLabel.style.visibility = 'hidden';
+    formSignupDateLabel.style.height = '0';
+    formSignupDateLabel.style.overflow = 'hidden';
+    formSignupDateLabel.style.opacity = '0';
+    formSignupDateLabel.style.margin = '0px';
+    formSignupDateLabel.style.padding = '0';
+
+    formCarpool.style.visibility = 'hidden';
+    formCarpoolLabel.style.visibility = 'hidden';
+    formCarpool.style.height = '0';
+    formCarpool.style.overflow = 'hidden';
+    formCarpool.style.opacity = '0';
+    formCarpool.style.margin = '0px';
+    formCarpool.style.padding = '0';
+    formCarpoolLabel.style.height = '0';
+    formCarpoolLabel.style.overflow = 'hidden';
+    formCarpoolLabel.style.opacity = '0';
+    formCarpoolLabel.style.margin = '0px';
+    formCarpoolLabel.style.padding = '0';
+  };
+
+  formPresignYes.onclick = function formBudgetedExpenseNoButtonOnclick() {
+    formMaxnum.style.visibility = 'visible';
+    formSignupDate.style.visibility = 'visible';
+    formPresignNo.checked = false;
+    formMaxnum.style.height = '55px';
+    formMaxnum.style.overflow = 'visible';
+    formMaxnum.style.opacity = '1';
+    formMaxnum.style.margin = '8px auto';
+    formMaxnum.style.padding = '12px 0px';
+    formSignupDate.style.height = '55px';
+    formSignupDate.style.overflow = 'visible';
+    formSignupDate.style.opacity = '1';
+    formSignupDate.style.margin = '8px auto';
+    formSignupDate.style.padding = '12px 0px';
+
+    formSignupDateLabel.style.visibility = 'visible';
+    formSignupDateLabel.style.height = '10px';
+    formSignupDateLabel.style.overflow = 'visible';
+    formSignupDateLabel.style.opacity = '1';
+    formSignupDateLabel.style.margin = '8px auto';
+    formSignupDateLabel.style.padding = '12px 0px';
+
+    formCarpool.style.visibility = 'visible';
+    formCarpoolLabel.style.visibility = 'visible';
+    formCarpool.style.height = 'auto';
+    formCarpool.style.overflow = 'visible';
+    formCarpool.style.opacity = '1';
+    formCarpool.style.margin = '8px auto';
+    formCarpool.style.padding = '12px 0px';
+    formCarpoolLabel.style.height = '10px';
+    formCarpoolLabel.style.overflow = 'visible';
+    formCarpoolLabel.style.opacity = '1';
+    formCarpoolLabel.style.margin = '8px auto';
+    formCarpoolLabel.style.padding = '12px 0px';
+  };
+  formCarpoolYes.onclick = function formBudgetedExpenseNoButtonOnclick() {
+    formCarpoolNo.checked = false;
+
+
+  };
+  formCarpoolNo.onclick = function formBudgetedExpenseNoButtonOnclick() {
+    formCarpoolYes.checked = false;
+
+
+  };
+    </script>
+</body>
+</html>
