@@ -9,6 +9,16 @@ body {
   
 }
 
+.header
+{
+  background: #ffff;
+  width:100%;
+  height:90px; 
+  z-index: 2;
+  box-shadow: rgba(0,0,0,0.2) 0px 4px 8px 0px;
+  color:#ffff; 
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -16,5 +26,7 @@ code {
 
 .center {
   text-align: center;
-  border: 3px solid green;
+  color:white;
+  
 }
+
