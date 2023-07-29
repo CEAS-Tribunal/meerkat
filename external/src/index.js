@@ -57,7 +57,6 @@ function Author() {
 } */
 
 // Everything below is for MEERKAT
-
 function NavBar() {
   return (
     <header>
