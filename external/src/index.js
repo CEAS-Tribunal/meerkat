@@ -1,17 +1,137 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./assets/styles/index.css";
+import logo from "./assets/images/tribunal_logo.png"; // use in Navbar component file
+import event_img from "./assets/images/tribunal_logo_large.png"; // use in Infocard component file. add a comment to use this image IF an image is not provided by the
+
+/* function BookList() {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+}
+
+function Book() {
+  return (
+    <article className="book">
+      <img
+        src="https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg"
+        alt="Atomic Habits"
+      />
+      <h2> Atomic Habits </h2>
+      <h4> James Clear </h4>
+    </article>
+  );
+}
+ */
+
+/* function Image() {
+  return (
+    <img
+      src="https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg"
+      alt="Atomic Habits"
+    />
+  );
+}
+function Title() {
+  return (
+    <>
+      <h2> Atomic Habits </h2>
+    </>
+  );
+}
+function Author() {
+  const inlineHeadingStyles = {
+    color: "#617d98",
+    fontSize: "0.75rem",
+    marginTop: "0.5rem",
+    letterSpacing: "2px",
+  };
+
+  return <h4> James Clear </h4>;
+} */
+
+// Everything below is for MEERKAT
+
+function NavBar() {
+  return (
+    <header>
+      <a href="https://tribunal.uc.edu/">
+        <img src={logo} alt="CEAS Tribunal Logo" />
+      </a>
+    </header>
+  );
+}
+
+function Title() {
+  return (
+    <div className="title">
+      <h1> Event Sign-up </h1>
+    </div>
+  );
+}
+
+// We will need to create dynamic InfoCards. Every piece of information will be stored in a variable
+function InfoCard() {
+  const eventName = "CEAS Luau";
+  const date = "07/27/2023";
+  const time = "12p - 5p";
+  const description = "fun summer event";
+  return (
+    <article className="infocard">
+      <img src={event_img} alt="test img" />
+      <br />
+      <a href="https://tribunal.uc.edu/">{eventName}</a>
+      <h2>
+        <b>Date/Time:</b> {date} from {time}
+      </h2>
+      <h4>
+        <b>Event Description:</b> {description}
+      </h4>
+    </article>
+  );
+}
+
+function InfoCardList() {
+  return (
+    <section className="infocardlist">
+      <InfoCard />
+      <InfoCard />
+      <InfoCard />
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <p>
+        University of Cincinnati | © 2023 College of Engineering and Applied
+        Science Tribunal
+      </p>
+      <p>
+        For any questions or comments, contact us at
+        ceastribunaltechnology@gmail.com.
+      </p>
+    </footer>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <div className="intro">
+      <NavBar />
+      <Title />
+      <InfoCard />
+      {/* <InfoCardList /> */}
+      {/* <BookList /> */}
+    </div>
+    <Footer />
+  </>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
