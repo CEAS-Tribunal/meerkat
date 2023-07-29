@@ -69,9 +69,18 @@ function NavBar() {
 
 function Title() {
   return (
-    <div className="title">
-      <h1> Event Sign-up </h1>
-    </div>
+    <>
+      <div className="title">
+        <h1> Event Sign-up </h1>
+      </div>
+      <div className="page-info">
+        <p>
+          This is placeholder text. Text regarding the event signup form will be
+          here. Currently, this is in the Title component, but we can have a
+          separate component for this.
+        </p>
+      </div>
+    </>
   );
 }
 
@@ -98,7 +107,7 @@ function InfoCard() {
 
 function InfoCardList() {
   return (
-    <section className="infocardlist">
+    <section className="infocard-list">
       <InfoCard />
       <InfoCard />
       <InfoCard />
@@ -127,8 +136,7 @@ root.render(
     <div className="intro">
       <NavBar />
       <Title />
-      <InfoCard />
-      {/* <InfoCardList /> */}
+      <InfoCardList />
       {/* <BookList /> */}
     </div>
     <Footer />
