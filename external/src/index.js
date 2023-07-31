@@ -90,6 +90,7 @@ function InfoCard() {
   const date = "07/27/2023";
   const time = "12p - 5p";
   const description = "fun summer event";
+  const location = "Coney Island";
   return (
     <article className="infocard">
       <img src={event_img} alt="test img" />
@@ -97,6 +98,9 @@ function InfoCard() {
       <a href="https://tribunal.uc.edu/">{eventName}</a>
       <h2>
         <b>Date/Time:</b> {date} from {time}
+      </h2>
+      <h2>
+        <b>Location:</b> {location}
       </h2>
       <h4>
         <b>Event Description:</b> {description}
@@ -130,13 +134,21 @@ function Footer() {
   );
 }
 
+function Container() {
+  return (
+    <div className="container">
+      <Title />
+      <InfoCardList />
+    </div>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <div className="intro">
       <NavBar />
-      <Title />
-      <InfoCardList />
+      <Container />
       {/* <BookList /> */}
     </div>
     <Footer />
