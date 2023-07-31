@@ -89,8 +89,14 @@ function InfoCard() {
   const eventName = "CEAS Luau";
   const date = "07/27/2023";
   const time = "12p - 5p";
-  const description = "fun summer event";
+  let description =
+    "According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible. Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! ";
   const location = "Coney Island";
+
+  if (description.length > 100) {
+    description = description.substring(0, 100) + "...";
+  }
+
   return (
     <article className="infocard">
       <img src={event_img} alt="test img" />
