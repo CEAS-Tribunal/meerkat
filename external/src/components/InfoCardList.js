@@ -1,7 +1,8 @@
  import React from "react"; 
  import event_img from "../assets/images/tribunal_logo_large.png"; // use in Infocard component file. add a comment to use this image IF an image is not provided by the
+ import {Link} from 'react-router-dom'
 
-  // We will need to create dynamic InfoCards. Every piece of information will be stored in a variable
+ // We will need to create dynamic InfoCards. Every piece of information will be stored in a variable
   function InfoCard() {
     const eventName = "CEAS Luau";
     const date = "07/27/2023";
@@ -18,7 +19,9 @@
       <article className="infocard">
         <img src={event_img} alt="test img" />
         <br />
-        <a href="/signup">{eventName} --Signup Here!</a>
+        <div>
+      <Link to='/signup'> {eventName} --Sign Up Here! </Link>
+      </div>
         <h2>
           <b>Date/Time:</b> {date} from {time}
         </h2>

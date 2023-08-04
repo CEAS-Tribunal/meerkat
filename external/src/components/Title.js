@@ -4,7 +4,7 @@ function Title() {
     return (
       <>
         <div className="title">
-          <h1> Event Sign-up </h1>
+          <h1> Event Sign-Up </h1>
         </div>
         <div className="page-info">
           <p>
