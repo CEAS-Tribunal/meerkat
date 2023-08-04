@@ -11,11 +11,10 @@ import {Routes, Route } from 'react-router-dom';
       <div className="intro">
         <NavBar />
         <Routes>
-            <Route path='/signup' element = {<SignUp/>}/> 
+            <Route path="/" element={<Container />} />
+            <Route path='/signup' element = {<SignUp />}/> 
         </Routes> 
-        <Container />
       </div>
-
       <div className = "footer">
         <Footer />
       </div>
