@@ -5,7 +5,7 @@ import SignUp from "./components/SignUp";
 import Container from "./components/Container"; 
 import {Routes, Route } from 'react-router-dom'; 
 
-  function App() {
+  function App() { 
     return (
     <div>
       <div className="intro">
