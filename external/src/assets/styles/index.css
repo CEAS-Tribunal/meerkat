@@ -15,6 +15,24 @@ body {
   background-color: #fff;
 }
 
+.title {
+  padding-top: 0px;
+  font-size:xx-large; 
+}
+
+button {
+  padding: 7px 50px;
+  background-color: #cb2d3e;
+  border: 2px solid #cb2d3e;
+  box-shadow: 0px 5px 10px 0 rgba(0,0,0,0.26);
+  font: 300 20px "Open Sans", sans-serif;
+  border-radius: 10px;
+  color: white;
+  white-space: nowrap;
+  margin: 25px 25px;
+}
+
+
 .intro {
   min-height: 100vh;
   background: #cb2d3e center; /* Fallback for old browsers */
@@ -138,54 +156,21 @@ footer p:nth-of-type(2) {
   margin: 0 auto;
 }
 
-/**********************************************************************************/
-/* "booklist" is a className. It's selecting the JSX tag that has the className "booklist"*/
-/* .booklist {
-  width: 60vw;
-  max-width: 1170px;
-  height: 87vw;
-  margin: 2rem auto;
-  margin-bottom: 8rem;
-  display: grid;
-  gap: 0.5rem;
-} */
-
-/*
-.book {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  text-align: center;
-  max-width: 960px;
-  margin: 40px auto;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
-  position: relative;
-  ///////mihir's styles above. react video below///////////
-  background: #fff;
-  border-radius: 1rem;
-  height: 32.5rem;
-  margin: 10px auto;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
-  text-align: center;
-}*/
-
-/* this is for all images in the book class. Any images outside of the book class don't follow these styles*/
-/* .book img {
-  width: 75%;
-  object-fit: cover;
-  margin: 1rem auto;
+.signup-button
+{
+  padding: 7px 50px;
+  background-color: #cb2d3e;
+  border: 2px solid #cb2d3e;
+  box-shadow: 0px 5px 10px 0 rgba(0,0,0,0.26);
+  font: 300 20px "Open Sans", sans-serif;
+  border-radius: 10px;
+  color: white;
+  white-space: nowrap;
+  margin: 25px 25px;
 }
 
-.book h2 {
-  margin-top: 2rem;
-  font-size: 1rem;
+.signup-button.infocard:hover
+{
+  box-shadow: 5px 10px 15px 0 rgba(0,0,0,0.26);
+  /* font-weight: bold; */
 }
-
-.book h4 {
-  color: #617d98;
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
-  letter-spacing: 2px;
-} */
