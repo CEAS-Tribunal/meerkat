@@ -21,9 +21,12 @@
     {
       window.location.href = "https://www.google.com"
     }
+
+     
     return (
       <article className="infocard">
-        <h1 className = "title">{eventName}</h1>
+        <h1 className = "event-name">{eventName}</h1>
+        <hr class="rounded"/>
         <img src={event_img} alt="test img" />
         <br />
         <div>

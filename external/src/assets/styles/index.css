@@ -174,3 +174,18 @@ footer p:nth-of-type(2) {
   box-shadow: 5px 10px 15px 0 rgba(0,0,0,0.26);
   /* font-weight: bold; */
 }
+
+.event-name
+{
+  font-size:xx-large;  
+  font-family: "Roboto", sans-serif;
+  font-weight:100; 
+  color: #cb2d3e;
+  padding-bottom: 15px;
+}
+/* 
+.rounded 
+{
+  border-width: 2px;
+  color: gray; 
+} */
