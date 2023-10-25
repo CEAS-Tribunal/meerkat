@@ -26,6 +26,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   </head>
+  <script>
+    document.getElementById("signup-button").addEventListener("click", signUpButton);
+    
+    function signUpButton() {
+      document.getElementById("signup-button").innerHTML = "YOU CLICKED ME!";
+    }
+    </script>
   <body>
     <div id="root"></div>
 
