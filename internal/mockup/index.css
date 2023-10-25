@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* *, body, and .intro will be in index.css. the rest will be in separate css files for their component*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+.intro {
+  min-height: 100vh;
+  background: #cb2d3e center; /* Fallback for old browsers */
+  background: linear-gradient(to top, #ef473a, #cb2d3e);
+  background-size: cover;
+  background-blend-mode: darken;
+  padding-bottom: 20px;
+}
+
+/*Nav Bar - this will be in navbar.css*/
+header {
+  background: #fff;
+  width: 100%;
+  height: 90px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  color: #fff;
+}
+
+header img {
+  float: left;
+  width: 180px;
+  margin: 14px;
+}
+
+/* Title */
+.title h1 {
+  max-width: 960px;
+  margin: 40px auto;
+  text-align: center;
+  color: #ffff;
+  font: 300 50px "Open Sans", sans-serif;
+  padding: 10px;
+  border-bottom: 6px solid rgba(255, 255, 255, 0.349);
+}
+
+.page-info p {
+  max-width: 960px;
+  margin: 20px auto;
+  color: #ffff;
+}
+
+.infocard-list {
+  width: auto;
+  max-width: 960px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Once the dimensions of the screen cross 768 pixels, arrange the infocardlist in a grid with 2 infocards per row*/
+@media screen and (min-width: 800px) {
+  .infocard-list {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+.infocard {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  position: relative;
+  transition: all 200ms 0.1s ease-in;
+}
+
+.infocard:hover {
+  transform: scale(1.05);
+}
+
+.infocard img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.infocard a {
+  font-size: 1.25rem;
+}
+
+.infocard h2 {
+  /* margin-top: 1rem; */
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.infocard h4 {
+  color: #617d98;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-weight: normal;
+}
+
+/* Footer */
+footer {
+  background: #3f3f3f;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+footer p {
+  text-align: center;
+  margin: 0 20px;
+  max-width: unset;
+  padding-top: 16px;
+  font-size: 14px;
+  color: #cacaca;
+}
+
+footer p:nth-of-type(2) {
+  padding-top: 4px;
+  margin-top: 0;
+  padding-bottom: 16px;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/**********************************************************************************/
+/* "booklist" is a className. It's selecting the JSX tag that has the className "booklist"*/
+/* .booklist {
+  width: 60vw;
+  max-width: 1170px;
+  height: 87vw;
+  margin: 2rem auto;
+  margin-bottom: 8rem;
+  display: grid;
+  gap: 0.5rem;
+} */
+
+/*
+.book {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  max-width: 960px;
+  margin: 40px auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  position: relative;
+  ///////mihir's styles above. react video below///////////
+  background: #fff;
+  border-radius: 1rem;
+  height: 32.5rem;
+  margin: 10px auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
+}*/
+
+/* this is for all images in the book class. Any images outside of the book class don't follow these styles*/
+/* .book img {
+  width: 75%;
+  object-fit: cover;
+  margin: 1rem auto;
+}
+
+.book h2 {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.book h4 {
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+} */
