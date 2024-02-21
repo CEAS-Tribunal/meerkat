@@ -4,7 +4,7 @@ function Footer() {
     return (
       <footer>
         <p>
-          University of Cincinnati | © 2023 College of Engineering and Applied
+          University of Cincinnati | © 2024 College of Engineering and Applied
           Science Tribunal
         </p>
         <p>
